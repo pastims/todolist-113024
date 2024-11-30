@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import TodoInput from "./components/TodoInput"
 import TodoList from "./components/TodoList"
+import TodoHeader from "./components/TodoHeader"
 
 function App() {
 
@@ -48,6 +49,7 @@ function App() {
 
   return (
     <>
+      <TodoHeader />
       <TodoInput todoValue={todoValue} setTodoValue={setTodoValue} handleAddTodos={handleAddTodos} />
       <TodoList handleEditTodo={handleEditTodo} handleDeleteTodo={handleDeleteTodo} todos={todos} />
     </>
